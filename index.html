@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>My Video Grid</title>
-	<style>
-		.video-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			grid-gap: 20px;
-		}
-		.video {
-			position: relative;
-			padding-bottom: 56.25%;
-			height: 0;
-			overflow: hidden;
-		}
-		.video iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-	</style>
-</head>
-<body>
-	<div class="video-grid">
-		<div class="video">
-			<iframe src="VIDEO_URL"></iframe>
-		</div>
-		<div class="video">
-			<iframe src="VIDEO_URL"></iframe>
-		</div>
-		<!-- Add more videos here -->
-	</div>
-</body>
+  <head>
+    <title>My Video Grid</title>
+    <style>
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+      }
+      .video {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+      .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+	  .h_iframe-aparat_embed_frame {
+		position: relative;
+	  }
+	  .h_iframe-aparat_embed_frame .ratio {
+		display: block;
+		width: 100%;
+		height: auto;
+	  }
+	  .h_iframe-aparat_embed_frame iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="video-grid">
+      <div class="video">
+        <iframe src="VIDEO_URL"></iframe>
+      </div>
+      <div class="video">
+
+        <div class="h_iframe-aparat_embed_frame">
+          <span style="display: block; padding-top: 57%"></span
+          ><iframe
+            src="https://www.aparat.com/video/video/embed/videohash/tRhOI/vt/frame?titleShow=true&recom=self"
+            allowfullscreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+        </div>
+
+        <!-- <iframe src="VIDEO_URL"></iframe> -->
+      </div>
+      <!-- Add more videos here -->
+    </div>
+  </body>
 </html>
