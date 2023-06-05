@@ -11,18 +11,10 @@ function App() {
       {/* <header className="App-header"> */}
       <HeaderComponent></HeaderComponent>
       <Row style={{padding:"4px",margin:'3px'}} gutter={[16,16]}>
-        {mainPage.map((x) => {
-          return<>
+        {mainPage.map((x) => (
           <Col span={8}>
             <VidCardComponent src={x.src} title={x.title} text={x.text} />
-          </Col>
-          <Col span={8}>
-          <VidCardComponent src={x.src} title={x.title} text={x.text} />
-        </Col>         
-         <Col span={8}>
-            <VidCardComponent src={x.src} title={x.title} text={x.text} />
-          </Col></>
-})}
+          </Col>))}
       </Row>
       <footer>
 <AppFooter></AppFooter>
