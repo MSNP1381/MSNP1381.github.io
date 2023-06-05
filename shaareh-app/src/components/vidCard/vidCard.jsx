@@ -14,8 +14,9 @@ export default function VidCardComponent({ src, title, text }) {
 
   return (
     <Card
+    hoverable
       className="video-card"
-      cover={<iframe src={src} title="Video Player" frameBorder="0" allowFullScreen></iframe>}
+      cover={<iframe style={{minHeight:"200px"}} src={src} title="Video Player" frameBorder="0" allowFullScreen></iframe>}
       actions={[
         <Button type="text" onClick={handleToggle}>
           {isCardOpen ? <CaretUpOutlined /> : <CaretDownOutlined />}
