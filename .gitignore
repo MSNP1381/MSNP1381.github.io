@@ -1,0 +1,20 @@
+./shaareh-app/node_modules
+./shaareh-app/.pnp
+./shaareh-app/.pnp.js
+
+# testing
+./shaareh-app/coverage
+
+# production
+./shaareh-app/build
+
+# misc
+./shaareh-app/.DS_Store
+./shaareh-app/.env.local
+./shaareh-app/.env.development.local
+./shaareh-app/.env.test.local
+../shaareh-app/env.production.local
+
+./shaareh-app/npm-debug.log*
+./shaareh-app/yarn-debug.log*
+./shaareh-app/yarn-error.log*

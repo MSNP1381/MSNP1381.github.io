@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5d8c5; /* Updated header color */
+    margin-bottom: 15px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
