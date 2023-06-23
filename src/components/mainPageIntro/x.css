@@ -1,0 +1,12 @@
+.img-intro{
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+.intro-div{
+    /* position: absolute; */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}

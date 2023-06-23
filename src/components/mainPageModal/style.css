@@ -1,0 +1,5 @@
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.no-hr hr{display: none;}
