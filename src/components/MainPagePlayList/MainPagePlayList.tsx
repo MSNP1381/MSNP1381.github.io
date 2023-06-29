@@ -18,7 +18,7 @@ function MainPagePlaylist({title,cards}:IPlayList) {
         {cards?.slice(0,4).map((x,index)=>{
 
         return (<div className="col-3">
-            <MainPageCard pic={x.poster} title={x.title} info={x.info} key={index} index={index} vid_url={x.vid_url}  ></MainPageCard>
+            <MainPageCard pic={x.poster} title={x.title} info={x.info} key={index+100} index={index} vid_url={x.vid_url}  ></MainPageCard>
 
         </div>)
 

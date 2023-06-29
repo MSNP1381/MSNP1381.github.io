@@ -24,14 +24,21 @@
 .my-index {
   border-radius: 100%;
   position: absolute;
-  margin: 0;
   left: .3rem;
   bottom: .3rem;
   background-color: rgba(255, 255, 255, 0.4);
-
+  
   text-align: center;
   font-size: smaller;
+
+  margin: auto;
   
-  height: fit-content;
-  width: 10%;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  color: azure;
+  mix-blend-mode: difference;
+}
+.my-index span{
+  margin: auto;
 }

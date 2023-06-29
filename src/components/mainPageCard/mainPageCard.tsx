@@ -15,7 +15,11 @@ function MainPageCard({ pic,  title,info ,index,vid_url}:IMainPageCard) {
   <div className="position-relative">
   <img src={pic} className=" rounded-0 card-img-top" alt={title}/>
 
-  <p className="my-index">{convertToPersianNumber(index+1)}</p>
+  <p className="my-index my-1">
+    <span>
+    {convertToPersianNumber(index+1)}
+    </span>
+    </p>
   </div>
   <div className="card-body px-1">
     <p className="card-title link-offset-3-hover my-text ">{title}</p>
