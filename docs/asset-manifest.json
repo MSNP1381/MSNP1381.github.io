@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b5d62f8.css",
-    "main.js": "/static/js/main.153e61e9.js",
+    "main.css": "/static/css/main.db78374e.css",
+    "main.js": "/static/js/main.f18e857a.js",
+    "static/media/bg.jpg": "/static/media/bg.33a72abaabd38c931388.jpg",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "static/media/Vazirmatn-RD-Regular.woff2": "/static/media/Vazirmatn-RD-Regular.9f94310c4b27df4c34ba.woff2",
     "static/media/shaareh.png": "/static/media/shaareh.8558bcb8b27d21943f10.png",
-    "static/media/OIP.jpg": "/static/media/OIP.6b189e283114e3d5bb05.jpg",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/shaareh-transparent.png": "/static/media/shaareh-transparent.c2479f0816bbf8676b7f.png",
     "index.html": "/index.html",
-    "main.2b5d62f8.css.map": "/static/css/main.2b5d62f8.css.map",
-    "main.153e61e9.js.map": "/static/js/main.153e61e9.js.map"
+    "main.db78374e.css.map": "/static/css/main.db78374e.css.map",
+    "main.f18e857a.js.map": "/static/js/main.f18e857a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b5d62f8.css",
-    "static/js/main.153e61e9.js"
+    "static/css/main.db78374e.css",
+    "static/js/main.f18e857a.js"
   ]
 }

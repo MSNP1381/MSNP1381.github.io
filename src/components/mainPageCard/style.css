@@ -1,9 +1,37 @@
-.card-img-left {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
+.my-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-size: small;
+}
+
+@supports not (-webkit-line-clamp: 1) {
+  .my-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 3.6em; /* set the maximum height of the text element */
+    font-size: small;
   }
+}
+.my-small {
+  font-size: smaller;
+}
+
+.my-index {
+  border-radius: 100%;
+  position: absolute;
+  margin: 0;
+  left: .3rem;
+  bottom: .3rem;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  text-align: center;
+  font-size: smaller;
   
-  .card-body {
-    width: 60%;
-  }
+  height: fit-content;
+  width: 10%;
+}

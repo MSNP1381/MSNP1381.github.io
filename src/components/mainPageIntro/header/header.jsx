@@ -4,7 +4,7 @@ import Shareh from "../../../assests/shaareh.png";
 import Contact from "../../../assests/contact-us.png";
 function MainPageHeader({setShowModal,showModal}) {
   return (
-    <div className=" z-3 fixed-top">
+    <div className=" z-3 fixed-top pt-2">
       <div className="d-flex justify-content-around flex-row z-3  justify-content-around ">
         <div className="bg-black bg-opacity-50 rounded-5 p-1 px-3">
           <img
