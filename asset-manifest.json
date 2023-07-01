@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c50a896d.css",
+    "main.js": "/static/js/main.faeb3346.js",
+    "static/media/s.wav": "/static/media/s.abf730c0d44316b19cb7.wav",
+    "static/media/bg.jpg": "/static/media/bg.33a72abaabd38c931388.jpg",
+    "static/media/404.jpg": "/static/media/404.91ce50245db208c349cf.jpg",
+    "static/media/saeb-day.png": "/static/media/saeb-day.1489bc7c9d8c5defc4a7.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/Vazirmatn-RD-Regular.woff2": "/static/media/Vazirmatn-RD-Regular.9f94310c4b27df4c34ba.woff2",
+    "static/media/shaareh.png": "/static/media/shaareh.8558bcb8b27d21943f10.png",
+    "static/media/shaareh-transparent.png": "/static/media/shaareh-transparent.c2479f0816bbf8676b7f.png",
+    "index.html": "/index.html",
+    "main.c50a896d.css.map": "/static/css/main.c50a896d.css.map",
+    "main.faeb3346.js.map": "/static/js/main.faeb3346.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c50a896d.css",
+    "static/js/main.faeb3346.js"
+  ]
+}
