@@ -1,0 +1,26 @@
+.h_iframe-aparat_embed_frame {
+    position: relative;
+  }
+  .h_iframe-aparat_embed_frame .ratio {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+  .h_iframe-aparat_embed_frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #wtf{
+    display: block; padding-top: 57%
+  }
+  .row{
+    margin: auto !important;
+    max-width:  80%;
+  }
+  /* .top-vid{
+    max-height:30vh ;
+  } */
+

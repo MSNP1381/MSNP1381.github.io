@@ -24,7 +24,7 @@ export default function MainPageIntro(props) {
           </div>
           <div className="row">
             <div className="d-flex flex-row justify-content-around">
-              <a
+              {/* <a
                 style={{direction: "ltr"}}
                 href="https://www.aparat.com/Farhangi_iust"
                 className="link-info "
@@ -36,7 +36,8 @@ export default function MainPageIntro(props) {
                 alt="aparat"
               />
                 @Farhangi_iust
-              </a>
+              </a> */}
+              {/* <p className="text">انجمن علمی شارح</p> */}
             </div>
           </div>
         </div>

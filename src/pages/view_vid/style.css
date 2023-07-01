@@ -19,3 +19,6 @@
 .collapse .accordion-body{
   transition: opacity 0.5s ease-out;
 }
+.row {
+  max-width: 95% !important;
+}
