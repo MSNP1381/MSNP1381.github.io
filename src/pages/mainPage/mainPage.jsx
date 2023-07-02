@@ -44,7 +44,7 @@ function MainPage(props) {
   const [show, setShow] = useState(!false);
 
   const handleClose = () => {
-    alert("fds")
+    // alert("fds")
     audio.pause();
     audio.currentTime = 0;
     setIsPlaying(false);
