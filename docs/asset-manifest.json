@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ebbb247.css",
+    "main.js": "/static/js/main.ac4c05ac.js",
+    "static/media/bg.jpg": "/static/media/bg.de9ce39577dab7ea3671.jpg",
+    "static/media/iust.png": "/static/media/iust.a11da3c1ae847d8c43aa.png",
+    "static/media/Vazirmatn-RD-FD-NL-Regular.woff2": "/static/media/Vazirmatn-RD-FD-NL-Regular.1b07e85c1afebbbb98a2.woff2",
+    "index.html": "/index.html",
+    "main.7ebbb247.css.map": "/static/css/main.7ebbb247.css.map",
+    "main.ac4c05ac.js.map": "/static/js/main.ac4c05ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ebbb247.css",
+    "static/js/main.ac4c05ac.js"
+  ]
+}
