@@ -6,12 +6,12 @@ const MainPage = (props) => {
     const [shareCount,setShareCount]=useState(0);
     const [eachShare,setEachShare]=useState(40000);
     return (
-        <div className='container'>
+        <div className='container-fluid vh-100 justify-content-center'>
             <div className="row">
 
                 <div className="col-md-6 order-md-1 d-flex justify-content-center">
                     <img
-                        src="https://placehold.co/400"
+                        src="https://dummyimage.com/400/"
                         alt="Image"
 
                         className="img-fluid rounded-3 m-auto"

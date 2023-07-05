@@ -8,8 +8,8 @@ function Header(props){
             <a href="/"
                className="d-flex align-items-center mb-3 mb-md-0  link-body-emphasis text-decoration-none"
                >
-                <img src="https://placehold.co/60" alt="heyat-logo" className='mx-2'/>
-                <span className="fs-4">هیئت شهدای گمنام دانشگاه علم و صنعت ایران</span>
+                <img src="https://dummyimage.com/60" alt="heyat-logo" className='mx-2 rounded-2'/>
+                <span className="fs-5 text-center">هیئت شهدای گمنام دانشگاه علم و صنعت ایران</span>
             </a>
 
             <img src={IUST} alt="iust_logo" className="  " height={60} style={{filter:"invert()"}}/>
