@@ -1,0 +1,66 @@
+:root {
+  --main-gray-color: #eff1f3;
+  --main-gold-color: #d4af37;
+  --main-black-color: #231f20;
+}
+*{
+ color: var(--main-gray-color); 
+ 
+}
+button{
+  color: var(--main-gray-color) !important;
+  background-color: var(--main-gold-color) !important;
+  // border-color: #eff1f3 !important;
+}
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+//$bg-url: "./assets/6757-7500x7813-phoo.ir_.png";
+//$bg-url: "./assets/6757-7500x7813-phoo.ir_.svg";
+//$bg-url: "./assets/bg.svg";
+$bg-url: "./assets/bg.jpg";
+$bg-width: 1776px;
+$bg-height: 0px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+/* Main styles */
+body {
+  background: url($bg-url) repeat 0 0;
+  background-size: 100%;
+
+  -webkit-animation: bg-scrolling-reverse 85s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 85s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 85s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 85s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+
+}
+

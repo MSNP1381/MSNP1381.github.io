@@ -1,0 +1,17 @@
+.share-box{
+
+
+    border: 1px var(--main-gray-color) solid;
+}
+.my-input{
+    border: none;
+    border-bottom: white 2px solid;
+    width: fit-content;
+     background: unset;
+    min-width: 20px ;
+}
+.my-input:focus {
+    outline: none !important;
+    border-color: white;
+    border-bottom-width: 3px;
+}
