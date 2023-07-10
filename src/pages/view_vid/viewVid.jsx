@@ -1,21 +1,21 @@
 import "./style.css";
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import MainPageCard from "../../components/mainPageCard/mainPageCard";
 import AllData from "../../assests/result.json";
 import Accordion from "react-bootstrap/Accordion";
-import myHTML from "../../assests/x2.html";
-
+import myHTML from "../../assests/parsed_html.html";
+import { useLocation } from "react-router-dom";
 
 function ViewVideo() {
-
-  const vidRef = useRef();
+  const location = useLocation();
+  const vidRef = useRef(<iframe/>);
   const vid_id = window.location.pathname.split("/")[2];
 
   const [category, setCategory] = useState("");
   const [item, setItem] = useState({});
   const [vids, setVids] = useState([]);
-  // const [isShown, setIsShown] = useState(true);
-  const max_vid_cnt = 2;
+  const max_vid_cnt = 8;
+
   function find_vid_info() {
     AllData.forEach((x) => {
       const vid_url = x.data.vid_url;
@@ -25,50 +25,73 @@ function ViewVideo() {
       }
     });
   }
+
   useEffect((_) => {
     find_vid_info();
-    vidRef.current.addEventListener('timeupdate', () => {
-      console.log(vidRef.current.currentTime);
-    });
   }, []);
+  useEffect(() => {
+    vid_loaded()
+    console.log(
+      vidRef.current,
+      vidRef.current.querySelector("video"),
+      vidRef.current.querySelector("div"),
+      document.querySelector("video.romeo-player-custom-control")
+    );
+    window.addEventListener("timeupdate", (e) => {
+      console.log(e);
+    });
+  }, [vidRef.current?.chidlren]);
   useEffect(
     (_) => {
       let cnt = 0;
       let l = [];
       AllData.some((x) => {
-        if (x.category == category) {
+        if (x.category === category) {
           l.push(x.data);
           cnt++;
         }
-        if (cnt >= max_vid_cnt) return true;
-        return false;
+        return cnt >= max_vid_cnt;
+
       });
       setVids(l);
-
     },
     [category]
   );
-    function vid_loaded(){
-    }
+  useEffect(() => {
+    console.log(location.hash);
+  }, [location.hash]);
+  function vid_loaded() {
+    var iframe = useRef.current;
+
+    
+  }
   return (
-    <div className=" py-2 vh-100">
-      <div className=" row vh-100  ">
-        <div className="col-md-6  bg-dark-subtle" id="detail">
-          <div className="d-none" dangerouslySetInnerHTML={{ __html:  myHTML }} style={{maxHeight:'100vh',overflow:"scroll"}}></div>
+    <div className="py-2 vh-100" style={{minHeight:"100vh"}}>
+      <div className=" row pb-2" style={{minHeight:"100vh"}}>
+        <div className="col-md-6  bg-dark-subtle order-2 order-md-1 pb-3" id="detail">
+          {vid_id==="tRhOI"&& <div
+            className="no-under link-light "
+            dangerouslySetInnerHTML={{ __html: myHTML }}
+            style={{
+              maxHeight: "100vh",
+              overflow: "scroll",
+              textDecoration: "none",
+            }}
+          ></div>}
         </div>
-        <div className="col-md-6 my-auto">
+        <div className="col-md-6 my-auto order-1 order-md-2 pb-3 p-md-0 ">
           <div className="row pt-2" id="vid">
-            <div class="h_iframe-aparat_embed_frame">
+            <div className="h_iframe-aparat_embed_frame">
               <span id="wtf"></span>
               <iframe
-              ref={vidRef}
+                ref={vidRef}
                 id="video-player"
                 src={`https://www.aparat.com/video/video/embed/videohash/${vid_id}/vt/frame`}
                 allowFullScreen={true}
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"
                 frameBorder="0"
-                onTimeUpdate={()=>console.log("dsaf")}
+                // onLoad={vid_loaded}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               ></iframe>
             </div>
@@ -80,16 +103,20 @@ function ViewVideo() {
           </div>
           <div className="row pt-2 my-auto" id="more_vid">
             <Accordion>
-              <Accordion.Item>
-                <Accordion.Header style={{fontFamily: "vazir"}}>ویدیو های بیشتر</Accordion.Header>
-
+              <Accordion.Item eventKey="0">
+                <Accordion.Header style={{ fontFamily: "vazir" }}>
+                  ویدیو های بیشتر
+                </Accordion.Header>
                 <Accordion.Body>
-                  <div className="row">
-                    {console.log(AllData)}
+                  <div
+                    className="row overflow-scroll"
+                    style={{ fontFamily: "vazir", maxHeight: "200px" }}
+                  >
                     {vids?.map((x) => {
                       return (
                         <div className="col-md-6">
                           <MainPageCard
+                            style={{ fontFamily: "vazir !important" }}
                             index={1}
                             pic={x.poster}
                             title={x.title}
@@ -109,4 +136,5 @@ function ViewVideo() {
     </div>
   );
 }
+
 export default ViewVideo;

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ViewVideo from "./pages/view_vid/viewVid";
 import MoreVid from "./pages/more_vid/moreVid";
 import NotFound from "./pages/not-found/notFound";
-
+import Footer from "./components/footer/footer";
 function App() {
   return (
     <div className="h-100 w-100">

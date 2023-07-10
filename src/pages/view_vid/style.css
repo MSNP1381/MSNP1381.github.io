@@ -22,3 +22,9 @@
 .row {
   max-width: 95% !important;
 }
+* p{
+  font-family: "Vazir", serif !important
+}
+.no-under{
+  text-decoration: none;
+}

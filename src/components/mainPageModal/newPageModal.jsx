@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalDialog } from "react-bootstrap";
 import "./style.css";
-function MainPageModal({showModal,setShowModal}) {
+function MainPageModal({showModal,setShowModal,content}) {
 
   const handleClose = () => setShowModal(false);
 
@@ -17,23 +17,8 @@ function MainPageModal({showModal,setShowModal}) {
     >
                <Modal.Header className="border-0" closeButton>
         </Modal.Header>
-        
-          {
-    console.log(showModal)
-  }
       <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
-        <Button variant="outline-light" size="lg" className="mb-4" >
-          Button 1
-        </Button>
-        <Button variant="outline-light" size="lg" className="mb-4">
-          Button 2
-        </Button>
-        <Button variant="outline-light" size="lg" className="mb-4">
-          Button 3
-        </Button>
-        <Button variant="outline-light" size="lg" className="mb-4">
-          Button 4
-        </Button>
+        {content}
       </Modal.Body>
     </Modal>
   );

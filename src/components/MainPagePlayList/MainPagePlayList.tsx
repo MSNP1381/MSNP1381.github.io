@@ -1,5 +1,5 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 import MainPageCard from "../mainPageCard/mainPageCard";
 import { ICardInfo } from "../../ICardInfo";
 interface IPlayList {
@@ -16,7 +16,7 @@ function MainPagePlaylist({ title, cat_eng, cards,max_cards=4 ,show_more=true}: 
         <h6 className="text-light-emphasis fs-6">{`${title}`}</h6>
         <a
           href={`/p/${cat_eng}`}
-          className="link-underline-info link-info"
+          className={`link-underline-info link-info ${!show_more&&"d-none"}`}
           style={{ fontSize: ".9rem" }}
         >
           بیشتر

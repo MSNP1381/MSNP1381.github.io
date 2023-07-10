@@ -24,7 +24,7 @@ function MoreVid(props) {
         className=""
         cat_eng={cat_eng}
         title={title}
-        cards={cards}
+        cards={cards.slice(1,undefined)}
         show_more={false}
       />
     );
@@ -35,24 +35,27 @@ function MoreVid(props) {
   useEffect((_) => {
     getCatVid();
   }, []);
-  function get_vid_id(url){
+  function get_vid_id(url,with_v=true){
     let x= url.split('/').slice(-1)[0];
-    return '/v/'+x.split('?')[0];
+    return with_v?'/v/'+x.split('?')[0]:x.split('?')[0];
   }
   return (
     <div className="container pt-2 vw-100 vh-100 ">
       <div className="row top-vid">
-        <div class="h_iframe-aparat_embed_frame">
+       {mainItem&& <div class="h_iframe-aparat_embed_frame">
           <span id="wtf"></span>
+      {console.log(mainItem,get_vid_id(mainItem?.vid_url,false))}
+
           <iframe
-            src="https://www.aparat.com/video/video/embed/videohash/jsPIg/vt/frame"
+          
+            src={`https://www.aparat.com/video/video/embed/videohash/${get_vid_id(mainItem?.vid_url,false)}/vt/frame`}
             allowFullScreen={true}
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
           ></iframe>
-        </div>
+        </div>}
         <div className="d-flex flex-row justify-content-between pt-2">
-          <h5>{mainItem?.title}</h5>
+          <h4 className="text-light-emphasis">{mainItem?.title}</h4>
           <a
             href={mainItem?get_vid_id(mainItem?.vid_url):""}
             className="link-underline-info"

@@ -5,14 +5,14 @@ import "./x.css";
 import MainPageHeader from "./header/header";
 import MainPageModal from "../mainPageModal/newPageModal";
 import Shaareh_trans from "../../assests/shaareh-transparent.png";
-import Aparat from "../../assests/aparat.png";
 export default function MainPageIntro(props) {
-  const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [contentModal, setContentModal] = useState(false);
   return (
     <div className="intro-div">
-      <MainPageHeader setShowModal={setShowModal} showModal={showModal} />
-      <MainPageModal setShowModal={setShowModal} showModal={showModal} />
-      <div className="Shaareh-big z-3">
+      <MainPageHeader setShowModal={setShowModal} showModal={showModal} setContent={setContentModal} />
+      <MainPageModal setShowModal={setShowModal} showModal={showModal} content={contentModal} />
+      <div className="Shaareh-big z-2">
         <img
           src={Shaareh_trans}
           alt="yet another shareh"
@@ -20,29 +20,14 @@ export default function MainPageIntro(props) {
         />
         <div className="  pt-4">
           <div className="">
-            <h4 className="text-light text-center">تارگاه شارح</h4>
-          </div>
-          <div className="row">
-            <div className="d-flex flex-row justify-content-around">
-              {/* <a
-                style={{direction: "ltr"}}
-                href="https://www.aparat.com/Farhangi_iust"
-                className="link-info "
-              >
-              <img
-              className="pe-1"
-                src={Aparat}
-                style={{ height: "24px", width: "auto" }}
-                alt="aparat"
-              />
-                @Farhangi_iust
-              </a> */}
-              {/* <p className="text">انجمن علمی شارح</p> */}
-            </div>
+            <h4 className="text-light text-center">تارگاهِ شرحِ شعرِ فارسی</h4>
           </div>
         </div>
       </div>
-      <img src={IntroImg} alt="intro" className="img-intro" />
+      <div className="introImg-div">
+
+      <img src={IntroImg} alt="intro" className={`img-intro ${window.innerHeight>window.innerWidth?'h-fit':"w-fit"}`} />
+      </div>
     </div>
   );
 }

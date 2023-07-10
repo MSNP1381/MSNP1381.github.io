@@ -1,24 +1,45 @@
 .img-intro{
     filter: blur(5px);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: scale-down; */
+    /* position:absolute; */
+    float:left;
+    overflow:hidden;
 } 
+.introImg-div{
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+}
+.w-fit{
+    width:100vw;
+    /* max-height:100vh; */
+}
+.h-fit{
+    margin-left:-30%;
+    height:100%;
+    /* width:100vw; */
+}
 .intro-div{
     /* position: absolute; */
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
+    
 }
 .Shaareh-big{
-    padding: 50px;
+    display:block;
+    padding: 2rem;
     border-radius: 30px;
-
+    
     background-color: rgba(0, 0, 0, .5);
+    /* transform: scale(.5); */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform:  translate(-50%, -50%);
+    /* max-height:80vh; */
 }
 .Shaareh-big-img{
     filter: invert();
