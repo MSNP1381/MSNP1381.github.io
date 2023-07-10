@@ -7,8 +7,8 @@ import myHTML from "../../assests/parsed_html.html";
 import { useLocation } from "react-router-dom";
 
 function ViewVideo() {
+  const vidRef=useRef(<video/>);
   const location = useLocation();
-  const vidRef = useRef(<iframe/>);
   const vid_id = window.location.pathname.split("/")[2];
 
   const [category, setCategory] = useState("");
@@ -29,18 +29,7 @@ function ViewVideo() {
   useEffect((_) => {
     find_vid_info();
   }, []);
-  useEffect(() => {
-    vid_loaded()
-    console.log(
-      vidRef.current,
-      vidRef.current.querySelector("video"),
-      vidRef.current.querySelector("div"),
-      document.querySelector("video.romeo-player-custom-control")
-    );
-    window.addEventListener("timeupdate", (e) => {
-      console.log(e);
-    });
-  }, [vidRef.current?.chidlren]);
+
   useEffect(
     (_) => {
       let cnt = 0;
@@ -60,11 +49,7 @@ function ViewVideo() {
   useEffect(() => {
     console.log(location.hash);
   }, [location.hash]);
-  function vid_loaded() {
-    var iframe = useRef.current;
 
-    
-  }
   return (
     <div className="py-2 vh-100" style={{minHeight:"100vh"}}>
       <div className=" row pb-2" style={{minHeight:"100vh"}}>
@@ -83,17 +68,7 @@ function ViewVideo() {
           <div className="row pt-2" id="vid">
             <div className="h_iframe-aparat_embed_frame">
               <span id="wtf"></span>
-              <iframe
-                ref={vidRef}
-                id="video-player"
-                src={`https://www.aparat.com/video/video/embed/videohash/${vid_id}/vt/frame`}
-                allowFullScreen={true}
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                frameBorder="0"
-                // onLoad={vid_loaded}
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <video src={item['vid_down_url']}   />
             </div>
           </div>
           <div className="row">
