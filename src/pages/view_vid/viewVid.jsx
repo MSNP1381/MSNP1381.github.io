@@ -7,7 +7,7 @@ import myHTML from "../../assests/parsed_html.html";
 import { useLocation } from "react-router-dom";
 
 function ViewVideo() {
-  const vidRef=useRef(<video/>);
+  const vidRef = useRef(<video />);
   const location = useLocation();
   const vid_id = window.location.pathname.split("/")[2];
 
@@ -40,7 +40,6 @@ function ViewVideo() {
           cnt++;
         }
         return cnt >= max_vid_cnt;
-
       });
       setVids(l);
     },
@@ -49,26 +48,62 @@ function ViewVideo() {
   useEffect(() => {
     console.log(location.hash);
   }, [location.hash]);
-
+  // useEffect(() => {
+  //   const iframeDocument = vidRef.current.contentWindow.document;
+  //   const iframeElement = iframeDocument.getElementsByTagName("video");
+  //   console.log(iframeDocument,iframeElement)
+  //   if (iframeElement.length>0){
+  //   iframeElement.addEventListener("timeupdate", (e) => {
+  //         console.log(e)
+  //     })}
+  // }, [vidRef.current])
+  function vid_loaded() {
+    const iframeDocument = vidRef.current.contentWindow.document;
+    const iframeElement = iframeDocument.getElementsByTagName("video");
+    console.log(iframeDocument, iframeElement);
+    if (iframeElement.length > 0) {
+      iframeElement.addEventListener("timeupdate", (e) => {
+        console.log(e);
+      });
+    }
+  }
   return (
-    <div className="py-2 vh-100" style={{minHeight:"100vh"}}>
-      <div className=" row pb-2" style={{minHeight:"100vh"}}>
-        <div className="col-md-6  bg-dark-subtle order-2 order-md-1 pb-3" id="detail">
-          {vid_id==="tRhOI"&& <div
-            className="no-under link-light "
-            dangerouslySetInnerHTML={{ __html: myHTML }}
-            style={{
-              maxHeight: "100vh",
-              overflow: "scroll",
-              textDecoration: "none",
-            }}
-          ></div>}
+    <div className="py-2 " style={{ maxHeight: "90vh" }}>
+      <div className=" row pb-2" style={{ maxHeight: "90vh" }}>
+        <div
+          className="col-md-6  bg-dark-subtle order-2 order-md-1 pb-3"
+          id="detail"
+        >
+          {vid_id === "tRhOI" && (
+            <div
+              className="no-under link-light "
+              dangerouslySetInnerHTML={{ __html: myHTML }}
+              style={{
+                maxHeight: "100vh",
+                overflow: "scroll",
+                textDecoration: "none",
+              }}
+            ></div>
+          )}
         </div>
         <div className="col-md-6 my-auto order-1 order-md-2 pb-3 p-md-0 ">
           <div className="row pt-2" id="vid">
+            {/* <video controls="" autoplay="" name="media">
+              <source src={item["vid_down_url"]} />
+            </video> */}
             <div className="h_iframe-aparat_embed_frame">
               <span id="wtf"></span>
-              <video src={item['vid_down_url']}   />
+              <iframe
+                // onLoad={vid_loaded}
+                src={`https://www.aparat.com/video/video/embed/videohash/${vid_id}/vt/frame`}
+                // src={item['vid_url']}
+                ref={vidRef}
+              />
+              {/* <video controls="" autoPlay="" name="media">
+                                <source
+                                    src="https://hajifirouz25.asset.aparat.com/aparat-video/e8953081bcd9c81a589d7f6a7723635739649577-720p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQwMjM3NGI1ZmViYTA5ZDE1NjFlOTkyMTVkMDJiMTY3IiwiZXhwIjoxNjg4OTk1NDM1LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.SZOA6zvPWMWvE8F7G6GBoL2OZOV8kIAIJ399sv-T71k"
+                                    type="video/mp4"/>
+                            </video> */}
             </div>
           </div>
           <div className="row">

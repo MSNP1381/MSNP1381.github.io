@@ -18,14 +18,15 @@ function MoreVid(props) {
       }
     });
     if (cards.length<=0){navigate("/error-page")}
-    setMainItem(cards[0])
+    setMainItem(cards.pop())
     let t = (
       <MainPagePlaylist
         className=""
         cat_eng={cat_eng}
         title={title}
-        cards={cards.slice(1,undefined)}
+        cards={cards}
         show_more={false}
+        max_cards={1000000000}
       />
     );
 

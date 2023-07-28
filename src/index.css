@@ -9,7 +9,17 @@ body {
   background-color: rgb(31, 41, 55) !important;
 
 }
-
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
 @font-face {
   font-family: 'Vazir';
   src: url('assests/Vazirmatn-RD-Regular.woff2') format('woff2');
@@ -21,4 +31,7 @@ h*{
 }
 p{
   color: white !important;
+}
+*{
+  scrollbar-width: thin;
 }

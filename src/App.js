@@ -7,6 +7,7 @@ import ViewVideo from "./pages/view_vid/viewVid";
 import MoreVid from "./pages/more_vid/moreVid";
 import NotFound from "./pages/not-found/notFound";
 import Footer from "./components/footer/footer";
+import Tmp from "./tmp";
 function App() {
   return (
     <div className="h-100 w-100">
@@ -17,6 +18,7 @@ function App() {
           <Route path="v/:id" element={<ViewVideo />} />
           <Route path="p/:id" element={<MoreVid />} />
           <Route path="not-found" element={<NotFound />} />
+          <Route path="tmp" element={<Tmp />} />
           <Route path="*" element={<Navigate to={'not-found'}></Navigate>} />
         </Routes>
       </BrowserRouter>
