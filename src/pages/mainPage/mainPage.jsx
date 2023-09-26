@@ -5,14 +5,10 @@ import MainPagePlaylist from "../../components/MainPagePlayList/MainPagePlayList
 import Footer from '../../components/footer/footer';
 import MyData from "../../assests/result.json";
 import saebDay from "../../assests/saeb-day.png";
-// import saebAudio from "../../assests/s.wav";
 import Modal from 'react-bootstrap/Modal';
-import hps from "../../assests/home-page.mp3";
 
 function MainPage(props) {
-    const audio = new Audio(
-        hps
-    );
+
 
     const [playLists, setPlayLists] = useState();
     const [removeModal, setRemoveModal] = useState(false);
@@ -44,10 +40,7 @@ function MainPage(props) {
             // console.log("goog");
             setRemoveModal(true);
             setShow(false);
-        } else {
-
-            handlePlay();
-        }
+        } 
         let t = to_categories(MyData);
         const keys = Object.keys(t);
         let x = keys.map((key, index) => {
@@ -60,10 +53,8 @@ function MainPage(props) {
     const [show, setShow] = useState(!false);
 
     const handleClose = () => {
-        // alert("fds")
-        audio.pause();
-        audio.currentTime = 0;
-        setIsPlaying(false);
+
+
         setShow(false);
 
 
@@ -72,10 +63,6 @@ function MainPage(props) {
 
     const [isPlaying, setIsPlaying] = useState(false);
 
-    const handlePlay = () => {
-        audio.play();
-        setIsPlaying(true);
-    };
 
 
     return (
